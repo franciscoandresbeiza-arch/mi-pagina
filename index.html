@@ -8,7 +8,7 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background: #0f172a;
     color: white;
 }
@@ -18,13 +18,12 @@ body {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
     url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d");
     background-size: cover;
-    background-position: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 45px;
     color: #38bdf8;
 }
 
@@ -32,14 +31,13 @@ body {
     font-size: 18px;
 }
 
-/* BOTONES */
+/* BOTÓN */
 .btn {
     background: #38bdf8;
     padding: 15px 30px;
     border: none;
-    cursor: pointer;
     border-radius: 8px;
-    font-size: 16px;
+    cursor: pointer;
     margin-top: 20px;
 }
 
@@ -49,11 +47,11 @@ section {
     text-align: center;
 }
 
-/* SERVICIOS */
-.servicios {
+/* CARDS */
+.grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -61,26 +59,19 @@ section {
     background: #1e293b;
     padding: 25px;
     border-radius: 12px;
-    width: 250px;
+    width: 260px;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
 }
 
-/* PLANES */
-.planes {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* IMAGEN */
-.img-section img {
-    width: 300px;
-    border-radius: 10px;
+/* LOGOS */
+.logos img {
+    width: 120px;
+    margin: 15px;
+    opacity: 0.7;
 }
 
 /* FOOTER */
@@ -95,55 +86,63 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-    <h1>Impulsa tu PYME 🚀</h1>
-    <p>Tu negocio online en minutos</p>
+    <h1>Haz crecer tu PYME 🚀</h1>
+    <p>Te creamos tu sistema de ventas online en días</p>
     <button class="btn" onclick="contacto()">Comenzar ahora</button>
 </div>
 
-<!-- SERVICIOS -->
+<!-- BENEFICIOS -->
 <section>
-    <h2>Todo lo que necesitas</h2>
-
-    <div class="servicios">
+    <h2>¿Qué hacemos por ti?</h2>
+    <div class="grid">
         <div class="card">🌐 Página web profesional</div>
         <div class="card">🛒 Tienda online</div>
-        <div class="card">💳 Link de pago</div>
+        <div class="card">💳 Pagos online</div>
         <div class="card">📱 WhatsApp automático</div>
     </div>
 </section>
 
-<!-- IMAGEN -->
-<section class="img-section">
-    <h2>Digitaliza tu negocio hoy</h2>
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<!-- PROBLEMA -->
+<section>
+    <h2>Muchos negocios pierden ventas</h2>
+    <p>No tienen web, ni pagos online, ni sistema digital</p>
+</section>
+
+<!-- SOLUCIÓN -->
+<section>
+    <h2>Nosotros lo hacemos por ti</h2>
+    <p>Sin complicaciones, rápido y económico</p>
 </section>
 
 <!-- PLANES -->
 <section>
-    <h2>Planes simples</h2>
-
-    <div class="planes">
+    <h2>Planes</h2>
+    <div class="grid">
         <div class="card">
             <h3>Básico</h3>
             <p>$9.990 / mes</p>
-            <p>Web simple</p>
         </div>
 
         <div class="card">
             <h3>Pro</h3>
             <p>$19.990 / mes</p>
-            <p>Tienda + pagos + WhatsApp</p>
         </div>
     </div>
 </section>
 
-<!-- CTA FINAL -->
+<!-- CONFIANZA -->
+<section class="logos">
+    <h2>Empresas confían en lo digital</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg">
+</section>
+
+<!-- CTA -->
 <section>
-    <h2>Empieza hoy mismo</h2>
+    <h2>Empieza hoy</h2>
     <button class="btn" onclick="contacto()">Hablar por WhatsApp</button>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <p>© 2026 ImpulsaPyme</p>
 </footer>
