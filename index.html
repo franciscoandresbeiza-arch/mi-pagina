@@ -27,11 +27,6 @@ body {
     color: #38bdf8;
 }
 
-.hero p {
-    font-size: 18px;
-}
-
-/* BOTÓN */
 .btn {
     background: #38bdf8;
     padding: 15px 30px;
@@ -47,7 +42,7 @@ section {
     text-align: center;
 }
 
-/* CARDS */
+/* GRID */
 .grid {
     display: flex;
     justify-content: center;
@@ -67,11 +62,20 @@ section {
     transform: translateY(-10px);
 }
 
-/* LOGOS */
-.logos img {
-    width: 120px;
-    margin: 15px;
-    opacity: 0.7;
+/* TESTIMONIOS */
+.testimonio {
+    max-width: 600px;
+    margin: auto;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* FAQ */
+.faq {
+    max-width: 700px;
+    margin: auto;
+    text-align: left;
 }
 
 /* FOOTER */
@@ -88,12 +92,18 @@ footer {
 <div class="hero">
     <h1>Haz crecer tu PYME 🚀</h1>
     <p>Te creamos tu sistema de ventas online en días</p>
-    <button class="btn" onclick="contacto()">Comenzar ahora</button>
+    <button class="btn" onclick="contacto()">Hablar por WhatsApp</button>
 </div>
+
+<!-- PROBLEMA -->
+<section>
+    <h2>El problema</h2>
+    <p>La mayoría de las PYMEs en Chile pierde ventas por no estar digitalizadas</p>
+</section>
 
 <!-- BENEFICIOS -->
 <section>
-    <h2>¿Qué hacemos por ti?</h2>
+    <h2>Todo en un solo lugar</h2>
     <div class="grid">
         <div class="card">🌐 Página web profesional</div>
         <div class="card">🛒 Tienda online</div>
@@ -102,16 +112,21 @@ footer {
     </div>
 </section>
 
-<!-- PROBLEMA -->
+<!-- COMO FUNCIONA -->
 <section>
-    <h2>Muchos negocios pierden ventas</h2>
-    <p>No tienen web, ni pagos online, ni sistema digital</p>
+    <h2>¿Cómo funciona?</h2>
+    <p>1. Nos contactas</p>
+    <p>2. Creamos tu sistema</p>
+    <p>3. Empiezas a vender</p>
 </section>
 
-<!-- SOLUCIÓN -->
+<!-- TESTIMONIOS -->
 <section>
-    <h2>Nosotros lo hacemos por ti</h2>
-    <p>Sin complicaciones, rápido y económico</p>
+    <h2>Clientes felices</h2>
+    <div class="testimonio">
+        <p>"Gracias a esta web ahora vendo online todos los días"</p>
+        <strong>- Negocio real</strong>
+    </div>
 </section>
 
 <!-- PLANES -->
@@ -121,23 +136,34 @@ footer {
         <div class="card">
             <h3>Básico</h3>
             <p>$9.990 / mes</p>
+            <p>Web simple</p>
         </div>
 
         <div class="card">
             <h3>Pro</h3>
             <p>$19.990 / mes</p>
+            <p>Tienda + pagos + WhatsApp</p>
         </div>
     </div>
 </section>
 
-<!-- CONFIANZA -->
-<section class="logos">
-    <h2>Empresas confían en lo digital</h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg">
+<!-- URGENCIA -->
+<section>
+    <h2>No te quedes atrás</h2>
+    <p>Mientras tú no vendes online, otros sí lo hacen</p>
 </section>
 
-<!-- CTA -->
+<!-- FAQ -->
+<section>
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq">
+        <p><strong>¿Cuánto demora?</strong><br>2 a 5 días</p>
+        <p><strong>¿Necesito saber tecnología?</strong><br>No, nosotros hacemos todo</p>
+        <p><strong>¿Puedo cancelar?</strong><br>Sí, sin compromiso</p>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
 <section>
     <h2>Empieza hoy</h2>
     <button class="btn" onclick="contacto()">Hablar por WhatsApp</button>
