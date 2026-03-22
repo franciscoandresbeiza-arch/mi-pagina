@@ -6,53 +6,90 @@
 <title>ImpulsaPyme</title>
 
 <style>
-body {
+
+/* RESET */
+* {
     margin: 0;
-    font-family: Arial;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background: #0f172a;
     color: white;
 }
 
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(2,6,23,0.9);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
 /* HERO */
 .hero {
+    height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
     url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d");
     background-size: cover;
-    padding: 120px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 45px;
+    font-size: 55px;
     color: #38bdf8;
 }
 
+.hero p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* BOTONES */
 .btn {
-    background: #38bdf8;
+    margin-top: 20px;
     padding: 15px 30px;
+    background: #38bdf8;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 20px;
 }
 
 /* SECCIONES */
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 /* GRID */
 .grid {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
 }
 
 .card {
     background: #1e293b;
-    padding: 25px;
+    padding: 30px;
     border-radius: 12px;
     width: 260px;
     transition: 0.3s;
@@ -62,70 +99,86 @@ section {
     transform: translateY(-10px);
 }
 
-/* TESTIMONIOS */
-.testimonio {
-    max-width: 600px;
-    margin: auto;
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
-/* FAQ */
-.faq {
-    max-width: 700px;
-    margin: auto;
-    text-align: left;
+.stat {
+    font-size: 30px;
+    color: #38bdf8;
+}
+
+/* IMAGEN */
+.img-full {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
 }
 
 /* FOOTER */
 footer {
     background: #020617;
-    padding: 20px;
+    padding: 40px;
+    text-align: center;
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<nav>
+    <h2>ImpulsaPyme</h2>
+    <div>
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Planes</a>
+        <a href="#">Contacto</a>
+    </div>
+</nav>
+
 <!-- HERO -->
 <div class="hero">
-    <h1>Haz crecer tu PYME 🚀</h1>
-    <p>Te creamos tu sistema de ventas online en días</p>
-    <button class="btn" onclick="contacto()">Hablar por WhatsApp</button>
+    <div>
+        <h1>Transforma tu negocio 🚀</h1>
+        <p>Digitaliza tu PYME y comienza a vender online hoy</p>
+        <button class="btn" onclick="contacto()">Comenzar</button>
+    </div>
 </div>
 
 <!-- PROBLEMA -->
 <section>
     <h2>El problema</h2>
-    <p>La mayoría de las PYMEs en Chile pierde ventas por no estar digitalizadas</p>
+    <p>Miles de negocios pierden clientes por no estar en internet</p>
 </section>
 
-<!-- BENEFICIOS -->
+<!-- SERVICIOS -->
 <section>
-    <h2>Todo en un solo lugar</h2>
+    <h2>Servicios</h2>
     <div class="grid">
-        <div class="card">🌐 Página web profesional</div>
+        <div class="card">🌐 Página web</div>
         <div class="card">🛒 Tienda online</div>
-        <div class="card">💳 Pagos online</div>
-        <div class="card">📱 WhatsApp automático</div>
+        <div class="card">💳 Pagos</div>
+        <div class="card">📱 WhatsApp</div>
     </div>
 </section>
 
-<!-- COMO FUNCIONA -->
+<!-- IMAGEN -->
 <section>
-    <h2>¿Cómo funciona?</h2>
-    <p>1. Nos contactas</p>
-    <p>2. Creamos tu sistema</p>
-    <p>3. Empiezas a vender</p>
+    <img class="img-full" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 </section>
 
-<!-- TESTIMONIOS -->
+<!-- STATS -->
 <section>
-    <h2>Clientes felices</h2>
-    <div class="testimonio">
-        <p>"Gracias a esta web ahora vendo online todos los días"</p>
-        <strong>- Negocio real</strong>
+    <h2>Resultados</h2>
+    <div class="stats">
+        <div class="stat">+100 clientes</div>
+        <div class="stat">+58% ventas online</div>
+        <div class="stat">24/7 ventas</div>
     </div>
 </section>
 
@@ -135,38 +188,19 @@ footer {
     <div class="grid">
         <div class="card">
             <h3>Básico</h3>
-            <p>$9.990 / mes</p>
-            <p>Web simple</p>
+            <p>$9.990</p>
         </div>
-
         <div class="card">
             <h3>Pro</h3>
-            <p>$19.990 / mes</p>
-            <p>Tienda + pagos + WhatsApp</p>
+            <p>$19.990</p>
         </div>
     </div>
 </section>
 
-<!-- URGENCIA -->
-<section>
-    <h2>No te quedes atrás</h2>
-    <p>Mientras tú no vendes online, otros sí lo hacen</p>
-</section>
-
-<!-- FAQ -->
-<section>
-    <h2>Preguntas frecuentes</h2>
-    <div class="faq">
-        <p><strong>¿Cuánto demora?</strong><br>2 a 5 días</p>
-        <p><strong>¿Necesito saber tecnología?</strong><br>No, nosotros hacemos todo</p>
-        <p><strong>¿Puedo cancelar?</strong><br>Sí, sin compromiso</p>
-    </div>
-</section>
-
-<!-- CTA FINAL -->
+<!-- CTA -->
 <section>
     <h2>Empieza hoy</h2>
-    <button class="btn" onclick="contacto()">Hablar por WhatsApp</button>
+    <button class="btn" onclick="contacto()">WhatsApp</button>
 </section>
 
 <footer>
@@ -174,8 +208,8 @@ footer {
 </footer>
 
 <script>
-function contacto() {
-    window.open("https://wa.me/569XXXXXXXX", "_blank");
+function contacto(){
+    window.open("https://wa.me/569XXXXXXXX","_blank");
 }
 </script>
 
