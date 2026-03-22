@@ -127,7 +127,44 @@ footer {
 
 </style>
 </head>
+.footer {
+    background: #0b3c6f;
+    padding: 50px 20px;
+}
 
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-col {
+    max-width: 250px;
+}
+
+.footer-col h2 {
+    color: white;
+}
+
+.footer-col p {
+    margin: 8px 0;
+    color: #cbd5f5;
+    font-size: 14px;
+}
+
+.social a {
+    margin-right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #cbd5f5;
+}
 <body>
 
 <!-- NAV -->
@@ -203,15 +240,47 @@ footer {
     <button class="btn" onclick="contacto()">WhatsApp</button>
 </section>
 
-<footer>
-    <p>© 2026 ImpulsaPyme</p>
+<footer class="footer">
+
+<div class="footer-container">
+
+    <!-- LOGO / MARCA -->
+    <div class="footer-col">
+        <h2>ImpulsaPyme</h2>
+        <p>Digitalizamos negocios en todo Chile</p>
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="footer-col">
+        <p>📍 Santiago, Chile</p>
+        <p>📞 +56 9 1234 5678</p>
+        <p>💬 WhatsApp: +56 9 1234 5678</p>
+        <p>📧 contacto@impulsapyme.cl</p>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-col">
+        <p>Políticas de privacidad</p>
+        <p>Términos y condiciones</p>
+        <p>Soporte</p>
+    </div>
+
+    <!-- REDES -->
+    <div class="footer-col">
+        <p>Síguenos</p>
+        <div class="social">
+            <a href="#">🌐</a>
+            <a href="#">📘</a>
+            <a href="#">📸</a>
+            <a href="#">💼</a>
+        </div>
+    </div>
+
+</div>
+
+<p class="copy">
+© 2026 ImpulsaPyme - Todos los derechos reservados
+</p>
+
 </footer>
-
-<script>
-function contacto(){
-    window.open("https://wa.me/569XXXXXXXX","_blank");
-}
-</script>
-
-</body>
 </html>
