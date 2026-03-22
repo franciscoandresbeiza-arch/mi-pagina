@@ -1,90 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>ImpulsaPyme</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: #0f172a;
-            color: white;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ImpulsaPyme</title>
 
-        header {
-            background: #020617;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
 
-        h1 {
-            color: #38bdf8;
-        }
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+}
 
-        section {
-            padding: 50px;
-            text-align: center;
-        }
+.hero h1 {
+    font-size: 40px;
+    color: #38bdf8;
+}
 
-        .btn {
-            background: #38bdf8;
-            padding: 15px 30px;
-            border: none;
-            cursor: pointer;
-            border-radius: 8px;
-            font-size: 16px;
-            color: black;
-        }
+.hero p {
+    font-size: 18px;
+}
 
-        .planes {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+/* BOTONES */
+.btn {
+    background: #38bdf8;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 20px;
+}
 
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
-            width: 250px;
-        }
+/* SECCIONES */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
 
-        footer {
-            background: #020617;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+/* SERVICIOS */
+.servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* PLANES */
+.planes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* IMAGEN */
+.img-section img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #020617;
+    padding: 20px;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>ImpulsaPyme 🚀</h1>
-    <p>Digitaliza tu negocio en minutos</p>
-</header>
-
-<section>
-    <h2>¿No tienes página web?</h2>
-    <p>Te ayudamos a vender online fácil y rápido</p>
+<!-- HERO -->
+<div class="hero">
+    <h1>Impulsa tu PYME 🚀</h1>
+    <p>Tu negocio online en minutos</p>
     <button class="btn" onclick="contacto()">Comenzar ahora</button>
+</div>
+
+<!-- SERVICIOS -->
+<section>
+    <h2>Todo lo que necesitas</h2>
+
+    <div class="servicios">
+        <div class="card">🌐 Página web profesional</div>
+        <div class="card">🛒 Tienda online</div>
+        <div class="card">💳 Link de pago</div>
+        <div class="card">📱 WhatsApp automático</div>
+    </div>
 </section>
 
-<section>
-    <h2>¿Qué hacemos por ti?</h2>
-    <p>✔ Creamos tu página web</p>
-    <p>✔ Tienda online</p>
-    <p>✔ Link de pago</p>
-    <p>✔ WhatsApp automático</p>
+<!-- IMAGEN -->
+<section class="img-section">
+    <h2>Digitaliza tu negocio hoy</h2>
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
 </section>
 
+<!-- PLANES -->
 <section>
-    <h2>Planes</h2>
+    <h2>Planes simples</h2>
+
     <div class="planes">
-
         <div class="card">
             <h3>Básico</h3>
             <p>$9.990 / mes</p>
-            <p>Página web simple</p>
+            <p>Web simple</p>
         </div>
 
         <div class="card">
@@ -92,16 +134,16 @@
             <p>$19.990 / mes</p>
             <p>Tienda + pagos + WhatsApp</p>
         </div>
-
     </div>
 </section>
 
+<!-- CTA FINAL -->
 <section>
-    <h2>Contáctanos</h2>
-    <p>Haz crecer tu negocio hoy</p>
+    <h2>Empieza hoy mismo</h2>
     <button class="btn" onclick="contacto()">Hablar por WhatsApp</button>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 ImpulsaPyme</p>
 </footer>
