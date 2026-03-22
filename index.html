@@ -1,91 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi página web</title>
+    <title>ImpulsaPyme</title>
     <style>
         body {
             margin: 0;
             font-family: Arial;
-            background-color: #0f172a;
+            background: #0f172a;
             color: white;
-            text-align: center;
         }
 
         header {
             background: #020617;
             padding: 20px;
+            text-align: center;
         }
 
-        nav {
-            background: #1e293b;
-            padding: 10px;
-        }
-
-        nav a {
+        h1 {
             color: #38bdf8;
-            margin: 0 15px;
-            text-decoration: none;
         }
 
         section {
-            padding: 40px;
+            padding: 50px;
+            text-align: center;
         }
 
-        img {
-            width: 200px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-
-        button {
-            padding: 10px 20px;
+        .btn {
             background: #38bdf8;
+            padding: 15px 30px;
             border: none;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 16px;
+            color: black;
+        }
+
+        .planes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
         }
 
         footer {
             background: #020617;
-            padding: 15px;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Mi Página 🚀</h1>
+    <h1>ImpulsaPyme 🚀</h1>
+    <p>Digitaliza tu negocio en minutos</p>
 </header>
 
-<nav>
-    <a href="#">Inicio</a>
-    <a href="#contacto">Contacto</a>
-</nav>
-
 <section>
-    <h2>Sobre mí</h2>
-    <p>Estoy aprendiendo a crear páginas web 🔥</p>
-
-    <img src="https://via.placeholder.com/200" alt="imagen">
-
-    <br><br>
-    <button onclick="saludar()">Haz clic</button>
+    <h2>¿No tienes página web?</h2>
+    <p>Te ayudamos a vender online fácil y rápido</p>
+    <button class="btn" onclick="contacto()">Comenzar ahora</button>
 </section>
 
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p>Sígueme en redes:</p>
-    <a href="#">Instagram</a> |
-    <a href="#">Facebook</a>
+<section>
+    <h2>¿Qué hacemos por ti?</h2>
+    <p>✔ Creamos tu página web</p>
+    <p>✔ Tienda online</p>
+    <p>✔ Link de pago</p>
+    <p>✔ WhatsApp automático</p>
+</section>
+
+<section>
+    <h2>Planes</h2>
+    <div class="planes">
+
+        <div class="card">
+            <h3>Básico</h3>
+            <p>$9.990 / mes</p>
+            <p>Página web simple</p>
+        </div>
+
+        <div class="card">
+            <h3>Pro</h3>
+            <p>$19.990 / mes</p>
+            <p>Tienda + pagos + WhatsApp</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Contáctanos</h2>
+    <p>Haz crecer tu negocio hoy</p>
+    <button class="btn" onclick="contacto()">Hablar por WhatsApp</button>
 </section>
 
 <footer>
-    <p>© 2026</p>
+    <p>© 2026 ImpulsaPyme</p>
 </footer>
 
 <script>
-function saludar() {
-    alert("🔥 Ya estás subiendo de nivel");
+function contacto() {
+    window.open("https://wa.me/569XXXXXXXX", "_blank");
 }
 </script>
 
